@@ -1,0 +1,41 @@
+.form-biere-container {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    max-width: fit-content;
+    margin: 10px auto;
+}
+
+.mat-mdc-form-field {
+    display: block;
+}
+
+textarea {
+    min-height: 150px;
+}
+
+.btn-form-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+input:read-only {
+    pointer-events: none;
+}
+
+
+.modal {
+    text-align: center;
+}
+
+.modal h1 {
+    color: #3f51b5;
+    font-weight: bolder;
+}
+
+.icon-display {
+    transform: scale(2);
+}

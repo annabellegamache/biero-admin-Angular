@@ -1,0 +1,56 @@
+<div class="form-biere-container">
+  <h2>Modification</h2>
+
+
+  <form [formGroup]="formModif">
+
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input matInput formControlName="nom">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Brasserie</mat-label>
+      <input matInput formControlName="brasserie">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description">{{uneBiere.description}}</textarea>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Date d'ajout</mat-label>
+      <input readonly matInput formControlName="date_ajout">
+    </mat-form-field>
+
+    <ng-container *ngIf="uneBiere.date_modif">
+      <mat-form-field>
+        <mat-label>Dernière modification</mat-label>
+        <input readonly matInput formControlName="date_modif">
+      </mat-form-field>
+    </ng-container>
+    <ng-container *ngIf="!uneBiere.date_modif">
+      <mat-form-field>
+        <mat-label>Dernière modification</mat-label>
+        <input readonly matInput value="{{uneBiere.date_ajout}} : Aucun modification depuis l'ajout">
+      </mat-form-field>
+    </ng-container>
+
+
+    <div class="btn-form-container">
+      <button [disabled]="!formModif.dirty || !formModif.valid" (click)="modifierBiere()" mat-raised-button
+        color="primary">Modifier</button>
+      <button mat-mini-fab color="warn" id="{{uneBiere.id_biere}}"
+        (click)="openDialog(id)"><mat-icon>delete</mat-icon></button>
+    </div>
+
+
+  </form>
+
+</div>
+
+<jw-modal class="modal" id="custom-modal-1">
+  <h1>Modification réussie!</h1>
+  <div><mat-icon class="icon-display" color="primary">thumb_up</mat-icon></div>
+</jw-modal>

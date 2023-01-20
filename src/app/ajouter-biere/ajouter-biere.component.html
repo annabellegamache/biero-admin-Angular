@@ -1,0 +1,36 @@
+<div class="form-biere-container">
+    <h2>Ajout d'une bière</h2>
+  
+  
+  <form [formGroup]="formAjout">
+  
+    <mat-form-field>
+      <mat-label>Nom</mat-label>
+      <input matInput formControlName="nom">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Brasserie</mat-label>
+      <input matInput formControlName="brasserie">
+    </mat-form-field>
+  
+    <mat-form-field>
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description"></textarea>
+    </mat-form-field>
+  
+
+    <div class="btn-form-container">
+      <button [disabled]="!formAjout.dirty || !formAjout.valid" (click)="ajouterBiere()" mat-raised-button color="primary">Ajouter</button>
+    </div>
+  
+    
+  
+  </form>
+  
+  </div>
+  
+  <jw-modal class="modal" id="custom-modal-1">
+    <h1>Ajout réussie!</h1>
+    <div><mat-icon class="icon-display" color="primary">thumb_up</mat-icon></div>
+  </jw-modal>

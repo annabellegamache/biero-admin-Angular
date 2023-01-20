@@ -1,0 +1,50 @@
+mat-toolbar {
+    gap: 20px;
+    align-items: center;
+}
+
+a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 0.8em;
+    color: #fff;
+    font-size: small;
+}
+
+img {
+    max-width: 80px;
+    margin-top: 50px;
+}
+
+h1 {
+    margin-bottom: 0
+}
+
+span.filler {
+    flex-grow: 1;
+}
+
+
+
+
+nav {
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+div.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+div.flex-container * {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+a.logo img {
+    width: 100px;
+}
